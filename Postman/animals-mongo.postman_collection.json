@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "75436aa5-3828-20e2-0a30-23aff548b456",
+		"name": "sssf-animals-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1435435"
+	},
+	"item": [
+		{
+			"name": "Add category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_name\": \"Mollusk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_name\": \"Mollusca\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/categories/66c794c677d55a2636b4dcfe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"categories",
+						"66c794c677d55a2636b4dcfe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Species",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"species_name\": \"Atlantic surf clam\",\n    \"category\":\"66c794c677d55a2636b4dcfe\",\n    \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [0, 0]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/species",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"species"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"animal_name\": \"Remppa\",\n    \"species\": \"64171d0db20347060e96c792\",\n    \"birthdate\": \"2006-11-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/animals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/animals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get species",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/species",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"species"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete species",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/species/64173a9b76a56b368c301106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"species",
+						"64173a9b76a56b368c301106"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify species",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"species_name\": \"Dog\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/species/641ab11a0747f2bc0bbcc7b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"species",
+						"641ab11a0747f2bc0bbcc7b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete animal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/animals/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"animals",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get animals from box",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/animals/location?topRight=60.3%2C24.5&bottomLeft=60.5%2C24.7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"animals",
+						"location"
+					],
+					"query": [
+						{
+							"key": "topRight",
+							"value": "60.3%2C24.5"
+						},
+						{
+							"key": "bottomLeft",
+							"value": "60.5%2C24.7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get species by area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"polygon\": {\n        \"coordinates\": [\n            [\n                [\n                    22.590126113210516,\n                    59.281949161766306\n                ],\n                [\n                    28.2390015599982,\n                    60.63841451716368\n                ],\n                [\n                    31.572857995891724,\n                    62.85750017567648\n                ],\n                [\n                    29.28050382771943,\n                    66.81251015443513\n                ],\n                [\n                    30.196884189404443,\n                    67.61347602134802\n                ],\n                [\n                    28.82318355557385,\n                    68.39221657035637\n                ],\n                [\n                    28.62545565405216,\n                    70.21703974578887\n                ],\n                [\n                    26.076870279916648,\n                    69.88989065456909\n                ],\n                [\n                    25.02318610031159,\n                    68.6805241162713\n                ],\n                [\n                    21.90584418112104,\n                    69.5603803976681\n                ],\n                [\n                    20.67711648756989,\n                    69.27013627024621\n                ],\n                [\n                    23.355952709280473,\n                    68.05189245781523\n                ],\n                [\n                    24.33642861110056,\n                    65.98845675271681\n                ],\n                [\n                    25.38834222803422,\n                    65.00204160453734\n                ],\n                [\n                    19.903136736495327,\n                    62.07235943137573\n                ],\n                [\n                    22.590126113210516,\n                    59.281949161766306\n                ]\n            ]\n        ],\n        \"type\": \"Polygon\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/species/area",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"species",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/categories/6433ea2aebd54bc421889418",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"categories",
+						"6433ea2aebd54bc421889418"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/categories/66c8481877750dc7726a52d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"categories",
+						"66c8481877750dc7726a52d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get animal by species",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/animals/species/LeijonaYkli6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"animals",
+						"species",
+						"LeijonaYkli6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
